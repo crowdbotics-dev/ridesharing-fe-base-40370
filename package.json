@@ -19,6 +19,7 @@
     "@react-navigation/stack": "^5.14.3",
     "@reduxjs/toolkit": "^1.5.0",
     "@screens/ledger-graph": "file:./screens/ledger-graph/",
+    "@screens/new-ride-booking": "file:./screens/new-ride-booking/",
     "@screens/ride-booking-details": "file:./screens/ride-booking-details/",
     "@screens/ride-booking-successful": "file:./screens/ride-booking-successful/",
     "@screens/ride-share-welcome": "file:./screens/ride-share-welcome/",

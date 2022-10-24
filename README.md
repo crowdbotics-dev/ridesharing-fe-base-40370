@@ -65,6 +65,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [screen-ride-share-welcome](screens/ride-share-welcome)
 - [screen-ride-booking-successful](screens/ride-booking-successful)
 - [screen-ride-booking-details](screens/ride-booking-details)
+- [screen-new-ride-booking](screens/new-ride-booking)
 
 # Getting started: Frontend
 
