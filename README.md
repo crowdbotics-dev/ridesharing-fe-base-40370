@@ -67,6 +67,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [screen-ride-booking-details](screens/ride-booking-details)
 - [screen-new-ride-booking](screens/new-ride-booking)
 - [screen-choose-ride-type](screens/choose-ride-type)
+- [react-native-splash](modules/splash)
 
 # Getting started: Frontend
 
