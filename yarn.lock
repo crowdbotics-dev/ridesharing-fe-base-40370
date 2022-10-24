@@ -1249,10 +1249,13 @@
     redux-thunk "^2.4.1"
     reselect "^4.1.5"
 
+"@screens/choose-ride-type@file:./screens/choose-ride-type/":
+  version "1.0.0"
+
 "@screens/ledger-graph@file:./screens/ledger-graph":
   version "1.0.0"
 
-"@screens/new-ride-booking@file:./screens/new-ride-booking/":
+"@screens/new-ride-booking@file:./screens/new-ride-booking":
   version "1.0.0"
 
 "@screens/ride-booking-details@file:./screens/ride-booking-details":

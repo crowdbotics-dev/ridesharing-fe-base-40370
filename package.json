@@ -18,6 +18,7 @@
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.14.3",
     "@reduxjs/toolkit": "^1.5.0",
+    "@screens/choose-ride-type": "file:./screens/choose-ride-type/",
     "@screens/ledger-graph": "file:./screens/ledger-graph/",
     "@screens/new-ride-booking": "file:./screens/new-ride-booking/",
     "@screens/ride-booking-details": "file:./screens/ride-booking-details/",
