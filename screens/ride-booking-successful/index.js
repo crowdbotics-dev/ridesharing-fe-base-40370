@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { Text, View, StyleSheet, Modal, Pressable, Image, ImageBackground } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  Modal,
+  Pressable,
+  Image,
+  ImageBackground
+} from "react-native";
 
 const RideBookingSuccessful = () => {
   const [modalVisible, setModalVisible] = useState(false);
   useEffect(() => {}, []);
-  return <ImageBackground style={styles.container} source={require("./assets/mapBackground.png")}>
+  return (
+    <ImageBackground
+      style={styles.container}
+      source={require("./assets/mapBackground.png")}>
       <View style={styles.header}>
         <Pressable>
           <Image source={require("./assets/backIcon.png")} />
@@ -13,27 +24,49 @@ const RideBookingSuccessful = () => {
           <Image source={require("./assets/menuIcon.png")} />
         </Pressable>
       </View>
-      <Modal animationType="slide" transparent={true} visible={modalVisible} onRequestClose={() => {
-      setModalVisible(!modalVisible);
-    }}>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <Text style={styles.heading}>Booking successful</Text>
             <Text style={styles.text}>Your Booking was successful</Text>
             <Text style={styles.text}>Your driver will pick you up in</Text>
             <Text style={styles.boldText}>5 min.</Text>
-            <Image style={styles.successIcon} source={require("./assets/successIcon.png")} />
+            <Image
+              style={styles.successIcon}
+              source={require("./assets/successIcon.png")}
+            />
             <View style={styles.btnContainer}>
-              <Button buttonText={"Done"} onPress={() => setModalVisible(!modalVisible)} style={styles.button} />
-              <Button buttonText={"Cancel"} onPress={() => setModalVisible(!modalVisible)} style={styles.button} color="#fff" textColor="#000" outlineColor="#000" />
+              <Button
+                buttonText={"Done"}
+                onPress={() => setModalVisible(!modalVisible)}
+                style={styles.button}
+              />
+              <Button
+                buttonText={"Cancel"}
+                onPress={() => setModalVisible(!modalVisible)}
+                style={styles.button}
+                color="#fff"
+                textColor="#000"
+                outlineColor="#000"
+              />
             </View>
           </View>
         </View>
       </Modal>
-      <Button buttonText={"Open Modal"} onPress={() => setModalVisible(true)} style={styles.modalButton} />
-    </ImageBackground>;
+      <Button
+        buttonText={"Open Modal"}
+        onPress={() => setModalVisible(true)}
+        style={styles.modalButton}
+      />
+    </ImageBackground>
+  );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -108,8 +141,8 @@ const styles = StyleSheet.create({
     marginBottom: 20
   }
 });
-export default RideBookingSuccessful;
 
+export default RideBookingSuccessful;
 const Button = params => {
   const backgroundColor = params.color || "#000";
   const textColor = params.textColor || "#fff";
@@ -121,16 +154,20 @@ const Button = params => {
   const btnText = {
     color: textColor
   };
-  return <View style={[buttonStyles.btnContainer, params.style]}>
+  return (
+    <View style={[buttonStyles.btnContainer, params.style]}>
       <View style={!params.hideShadow ? buttonStyles.shadowContainer : null}>
-        <Pressable style={[buttonStyles.btn, btnStyle]} onPress={params.onPress}>
+        <Pressable
+          style={[buttonStyles.btn, btnStyle]}
+          onPress={params.onPress}>
           <Text style={[buttonStyles.btnText, btnText]}>
             {params.buttonText}
           </Text>
           <View style={styles.childrenContainer}>{params.children}</View>
         </Pressable>
       </View>
-    </View>;
+    </View>
+  );
 };
 
 const buttonStyles = StyleSheet.create({
@@ -150,6 +187,7 @@ const buttonStyles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
+
     flexDirection: "row"
   },
   btnText: {
