@@ -1252,7 +1252,10 @@
 "@screens/ledger-graph@file:./screens/ledger-graph":
   version "1.0.0"
 
-"@screens/ride-sharing-history@file:./screens/ride-sharing-history/":
+"@screens/ride-share-welcome@file:./screens/ride-share-welcome/":
+  version "1.0.0"
+
+"@screens/ride-sharing-history@file:./screens/ride-sharing-history":
   version "1.0.0"
 
 "@screens/welcome-2@file:./screens/welcome-2":
