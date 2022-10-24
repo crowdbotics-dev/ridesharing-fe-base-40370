@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Text, View, StyleSheet, Modal, Pressable, Image, ImageBackground } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  Modal,
+  Pressable,
+  Image,
+  ImageBackground
+} from "react-native";
 
 const RideBookingDetails = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -11,7 +19,10 @@ const RideBookingDetails = () => {
       type: "Classic"
     });
   }, []);
-  return <ImageBackground style={styles.container} source={require("./assets/mapBackground.png")}>
+  return (
+    <ImageBackground
+      style={styles.container}
+      source={require("./assets/mapBackground.png")}>
       <View style={styles.header}>
         <Pressable>
           <Image source={require("./assets/backIcon.png")} />
@@ -20,14 +31,21 @@ const RideBookingDetails = () => {
           <Image source={require("./assets/menuIcon.png")} />
         </Pressable>
       </View>
-      <Modal animationType="slide" transparent={true} visible={modalVisible} onRequestClose={() => {
-      setModalVisible(!modalVisible);
-    }}>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <View style={styles.flexRow}>
               <View style={styles.item}>
-                <Image source={require("./assets/carIcon.png")} style={styles.icon} />
+                <Image
+                  source={require("./assets/carIcon.png")}
+                  style={styles.icon}
+                />
                 <Text>{rideDetails.type}</Text>
               </View>
               <View style={styles.item}>
@@ -41,26 +59,44 @@ const RideBookingDetails = () => {
             </View>
             <View style={styles.flexRow}>
               <View style={styles.item}>
-                <Image source={require("./assets/walletIcon.png")} style={styles.icon} />
+                <Image
+                  source={require("./assets/walletIcon.png")}
+                  style={styles.icon}
+                />
                 <Text style={styles.grey}>Payment</Text>
               </View>
               <View style={styles.item}>
-                <Image source={require("./assets/promoIcon.png")} style={styles.icon} />
+                <Image
+                  source={require("./assets/promoIcon.png")}
+                  style={styles.icon}
+                />
                 <Text style={styles.grey}>Promo</Text>
               </View>
               <View style={styles.item}>
-                <Image source={require("./assets/optionsIcon.png")} style={styles.icon} />
+                <Image
+                  source={require("./assets/optionsIcon.png")}
+                  style={styles.icon}
+                />
                 <Text style={styles.grey}>Options</Text>
               </View>
             </View>
-            <Button buttonText={"Cancel booking"} onPress={() => setModalVisible(!modalVisible)} style={styles.button} color="#EA4335" />
+            <Button
+              buttonText={"Cancel booking"}
+              onPress={() => setModalVisible(!modalVisible)}
+              style={styles.button}
+              color="#EA4335"
+            />
           </View>
         </View>
       </Modal>
-      <Button buttonText={"Open Modal"} onPress={() => setModalVisible(true)} style={styles.modalButton} />
-    </ImageBackground>;
+      <Button
+        buttonText={"Open Modal"}
+        onPress={() => setModalVisible(true)}
+        style={styles.modalButton}
+      />
+    </ImageBackground>
+  );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -147,8 +183,8 @@ const styles = StyleSheet.create({
     marginTop: 5
   }
 });
-export default RideBookingDetails;
 
+export default RideBookingDetails;
 const Button = params => {
   const backgroundColor = params.color || "#000";
   const textColor = params.textColor || "#fff";
@@ -160,16 +196,20 @@ const Button = params => {
   const btnText = {
     color: textColor
   };
-  return <View style={[buttonStyles.btnContainer, params.style]}>
+  return (
+    <View style={[buttonStyles.btnContainer, params.style]}>
       <View style={!params.hideShadow ? buttonStyles.shadowContainer : null}>
-        <Pressable style={[buttonStyles.btn, btnStyle]} onPress={params.onPress}>
+        <Pressable
+          style={[buttonStyles.btn, btnStyle]}
+          onPress={params.onPress}>
           <Text style={[buttonStyles.btnText, btnText]}>
             {params.buttonText}
           </Text>
           <View style={styles.childrenContainer}>{params.children}</View>
         </Pressable>
       </View>
-    </View>;
+    </View>
+  );
 };
 
 const buttonStyles = StyleSheet.create({
@@ -189,6 +229,7 @@ const buttonStyles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
+
     flexDirection: "row"
   },
   btnText: {

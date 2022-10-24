@@ -1252,7 +1252,10 @@
 "@screens/ledger-graph@file:./screens/ledger-graph":
   version "1.0.0"
 
-"@screens/ride-booking-successful@file:./screens/ride-booking-successful/":
+"@screens/ride-booking-details@file:./screens/ride-booking-details/":
+  version "1.0.0"
+
+"@screens/ride-booking-successful@file:./screens/ride-booking-successful":
   version "1.0.0"
 
 "@screens/ride-share-welcome@file:./screens/ride-share-welcome":
