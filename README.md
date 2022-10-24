@@ -61,6 +61,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [screen-welcome-2](screens/welcome-2)
 - [react-native-login](modules/login)
 - [screen-ledger-graph](screens/ledger-graph)
+- [screen-ride-sharing-history](screens/ride-sharing-history)
 
 # Getting started: Frontend
 

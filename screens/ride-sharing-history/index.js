@@ -4,49 +4,61 @@ import { Text, View, StyleSheet, FlatList, Image } from "react-native";
 const RideSharingHistory = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    setData([{
-      id: 1,
-      date: "12 Jan 2022",
-      pickUp: "S Main St, Los Angeles",
-      dropOff: "Maple Ave, Los Angeles",
-      bill: 43,
-      type: "Luxury Car",
-      driver: "Cauffina Carr"
-    }, {
-      id: 2,
-      date: "10 Jan 2022",
-      pickUp: "S Main St, Los Angeles",
-      dropOff: "Maple Ave, Los Angeles",
-      bill: 32,
-      type: "Standard Car",
-      driver: "Thomas R. Toe"
-    }, {
-      id: 3,
-      date: "08 Jan 2022",
-      pickUp: "S Main St, Los Angeles",
-      dropOff: "Maple Ave, Los Angeles",
-      bill: 56,
-      type: "SUV Car",
-      driver: "Cauffina Anthropy"
-    }, {
-      id: 4,
-      date: "12 Jan 2022",
-      pickUp: "S Main St, Los Angeles",
-      dropOff: "Maple Ave, Los Angeles",
-      bill: 43,
-      type: "Luxury Car",
-      driver: "Cauffina Anthropy"
-    }]);
+    setData([
+      {
+        id: 1,
+        date: "12 Jan 2022",
+        pickUp: "S Main St, Los Angeles",
+        dropOff: "Maple Ave, Los Angeles",
+        bill: 43,
+        type: "Luxury Car",
+        driver: "Cauffina Carr"
+      },
+      {
+        id: 2,
+        date: "10 Jan 2022",
+        pickUp: "S Main St, Los Angeles",
+        dropOff: "Maple Ave, Los Angeles",
+        bill: 32,
+        type: "Standard Car",
+        driver: "Thomas R. Toe"
+      },
+      {
+        id: 3,
+        date: "08 Jan 2022",
+        pickUp: "S Main St, Los Angeles",
+        dropOff: "Maple Ave, Los Angeles",
+        bill: 56,
+        type: "SUV Car",
+        driver: "Cauffina Anthropy"
+      },
+      {
+        id: 4,
+        date: "12 Jan 2022",
+        pickUp: "S Main St, Los Angeles",
+        dropOff: "Maple Ave, Los Angeles",
+        bill: 43,
+        type: "Luxury Car",
+        driver: "Cauffina Anthropy"
+      }
+    ]);
   }, []);
-  return <View style={styles.container}>
-      <FlatList showsVerticalScrollIndicator={false} data={data} keyExtractor={item => item.id.toString()} renderItem={({
-      item
-    }) => <View style={styles.rideContainer}>
+  return (
+    <View style={styles.container}>
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        data={data}
+        keyExtractor={item => item.id.toString()}
+        renderItem={({ item }) => (
+          <View style={styles.rideContainer}>
             <View style={styles.rideHeader}>
               <Text>{item.date}</Text>
             </View>
             <View style={styles.rideBody}>
-              <Image source={require("./assets/Progress.png")} style={styles.progressImage} />
+              <Image
+                source={require("./assets/Progress.png")}
+                style={styles.progressImage}
+              />
               <View style={styles.locationContainer}>
                 <View>
                   <Text style={styles.mainText}>{item.pickUp}</Text>
@@ -67,10 +79,12 @@ const RideSharingHistory = () => {
                 ${item.bill && item.bill.toFixed(2)}
               </Text>
             </View>
-          </View>} />
-    </View>;
+          </View>
+        )}
+      />
+    </View>
+  );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -120,4 +134,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
   }
 });
+
 export default RideSharingHistory;
