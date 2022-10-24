@@ -18,6 +18,7 @@
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.14.3",
     "@reduxjs/toolkit": "^1.5.0",
+    "@screens/ledger-graph": "file:./screens/ledger-graph/",
     "@screens/welcome-2": "file:./screens/welcome-2/",
     "axios": "^0.21.1",
     "prop-types": "15.8.1",
